@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-container">
+    <input type="text" class="name-input" placeholder="WHO ARE YOU?">
+    
+  
+    <div class="difficulty-container">
+      <span class="difficulty-title">SET THE DIFFICULTY!</span>
+      <div class="difficulty-buttons">
+        <button class="difficulty-button easy">5 x 5 EASY</button>
+        <button class="difficulty-button hard">7 x 7 HARD</button>
+      </div>
+    </div>
+    
+   
+    <button class="menu-button rules-button">RULES</button>
+    <button class="menu-button start-button" id="start-button" disabled>START GAME</button>
+    
+    <div class="rail-decoration"></div>
+    <div class="railway-container"></div>
+    <div class="header-container"></div>
+  </div>
+
+   <div class="description-container" id="description" style="display: none;">
+    <div class="description-content">
+      <h2>Game Rules</h2>
+      <ul>
+        <li>Set your name and choose the difficulty to start the game.</li>
+        <li>Easy difficulty is a 5x5 grid, and Hard is a 7x7 grid.</li>
+        <li>Your goal is to navigate the railway and reach the end as fast as possible.</li>
+        <li>Each move affects the route, so choose wisely!</li>
+        <li>The leaderboard shows who completes the map the fastest.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="game-container" id="game" style="display: none;">
+
+    <div class="title">RAILWAYS</div>
+    <div class="player-info-container">
+      <div>ROUTE DESIGNER: <span id="player-name">PlayerName</span></div>
+      <div>ELAPSED TIME: <span id="elapsed-time">00:00</span></div>
+    </div>
+     <div class="game-grid" id="game-grid"></div>
+     <div id="leaderboard" class="leaderboard">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboard-list"></ul>
+    </div>
+      
+
+    </div>
+    
+  </div>
+  <script src="file.js"></script>
+</body>
+</html>
+
+
